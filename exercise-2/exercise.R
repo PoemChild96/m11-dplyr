@@ -35,6 +35,7 @@ worst.car <- select(filtered, id)
 # The vehicle that gets the most hwy miles/gallon of vehicles of that make in that year
 MostMade <- function(y, m) {
   filtered <- filter(vehicles, make == m, year == y) %>% filter(hwy == max(hwy))
+  #filtered <- filter(filtered, hwy==max(hwy)) ---- combine with %>% 
   return(filtered)
 }
 
